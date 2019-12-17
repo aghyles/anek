@@ -1,7 +1,6 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
-
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
@@ -165,11 +164,23 @@ entity detail page css
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
 //custom-------------------------------------------------------------------------
+
+:root {
+  //background-color: #1976d2 !important;
+  //background-color: linear-gradient(red 10%, 30%, blue 90%);
+  --background-color: rgb(25, 118, 210);
+  --background-color: linear-gradient(90deg, rgba(25, 118, 210, 1) 0%, rgba(25, 118, 210, 1) 39%, rgba(0, 212, 255, 1) 100%);
+}
+
 .bg-dark {
   //background-color: #1976d2 !important;
   //background-color: linear-gradient(red 10%, 30%, blue 90%);
-  background: rgb(25, 118, 210);
-  background: linear-gradient(90deg, rgba(25, 118, 210, 1) 0%, rgba(25, 118, 210, 1) 39%, rgba(0, 212, 255, 1) 100%);
+  background: var(--background-color);
+}
+
+.bg-darki {
+  background: rgb(0, 212, 255);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(25, 118, 210, 1) 75%, rgba(25, 118, 210, 1) 100%);
 }
 .alert-warning {
   background-color: #80d8ff;
@@ -184,6 +195,13 @@ entity detail page css
 }
 #page-container {
   margin-top: 3em;
-  border: 2px solid red;
+  //border: 2px solid red;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.ontop {
+  z-index: 300;
+  position: fixed;
+  margin-top: 1em;
+  margin-left: 58%;
 }

@@ -12,18 +12,20 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent } from './layouts/main/main.component';
-import { NavbarComponent } from './layouts/navbar/navbar.component';
+import { NavbarComponent } from './layouts/sidenav/navbar/navbar.component';
 import { SidenavComponent } from './layouts/sidenav/sidenav.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
-import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
+import { ActiveMenuDirective } from './layouts/sidenav/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSliderModule } from '@angular/material/slider';
 import { T04JhDashboardModule } from 'app/Pages/dashboard/dashboard.module';
+import { MaterialModule } from 'app/material.module';
+import { SpeedDialFabComponent } from 'app/layouts/speeddialfab/speed-dial-fab.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CookieService } from 'ngx-cookie-service';
+import { CalendarModule } from 'app/calendar/calendar.module';
+import { T04JhDashboard2Module } from 'app/Pages/dashboard2/dashboard.module';
+//  import { FullCalendarModule } from '@fullcalendar/angular'; // for FullCalendar!
 
 @NgModule({
   imports: [
@@ -34,19 +36,18 @@ import { T04JhDashboardModule } from 'app/Pages/dashboard/dashboard.module';
     T04JhCoreModule,
     T04JhHomeModule,
     T04JhDashboardModule,
+    T04JhDashboard2Module,
+    CalendarModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     T04JhEntityModule,
     T04JhAppRoutingModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatSliderModule
+    MaterialModule,
+    //  FullCalendarModule // for FullCalendar!
+    OverlayModule
   ],
   declarations: [
     JhiMainComponent,
+    SpeedDialFabComponent,
     NavbarComponent,
     SidenavComponent,
     ErrorComponent,
@@ -54,6 +55,7 @@ import { T04JhDashboardModule } from 'app/Pages/dashboard/dashboard.module';
     ActiveMenuDirective,
     FooterComponent
   ],
-  bootstrap: [JhiMainComponent]
+  bootstrap: [JhiMainComponent],
+  providers: [CookieService]
 })
 export class T04JhAppModule {}

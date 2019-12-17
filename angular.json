@@ -5,12 +5,21 @@
   "projects": {
     "t-04-jh": {
       "root": "",
-      "sourceRoot": "src/main/webapp",
+      "sourceRoot": "src",
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "skipTests": true,
-          "style": "scss"
+          "style": "scss",
+          "styles": [
+            {
+              "input": "src/main/webapp/content/scss/my-theme.scss"
+            },
+            "src/styles.css"
+          ],
+          "stylePreprocessorOptions": {
+            "includePaths": ["src/main/webapp/@fuse"]
+          }
         },
         "@schematics/angular:directive": {
           "skipTests": true

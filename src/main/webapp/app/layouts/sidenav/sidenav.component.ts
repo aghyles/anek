@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginService } from 'app/core/login/login.service';
 import { JhiLanguageService } from 'ng-jhipster';
 import { JhiLanguageHelper } from 'app/core/language/language.helper';
@@ -9,6 +9,7 @@ import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Router } from '@angular/router';
 import { VERSION } from 'app/app.constants';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'jhi-sidenav',
@@ -25,6 +26,7 @@ export class SidenavComponent implements OnInit {
   swaggerEnabled: boolean;
   modalRef: NgbModalRef;
   version: string;
+  @Input() inputThemming: MatButton;
 
   constructor(
     private loginService: LoginService,

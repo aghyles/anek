@@ -5,6 +5,7 @@
     "menu": {
       "home": "Accueil",
       "dashbord": "Tableau de Bord",
+      "planning": "Planification",
       "nameofpage": "Nameofpage",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "appli": "Suivi Athlètes",

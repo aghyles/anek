@@ -15,11 +15,12 @@
     "typeRoots": ["node_modules/@types"],
     "baseUrl": "./",
     "paths": {
-      "app/*": ["src/main/webapp/app/*"]
+      "app/*": ["src/main/webapp/app/*"],
+      "@fuse/*": ["src/main/webapp/@fuse/*"]
     },
     "importHelpers": true,
     "allowJs": true
   },
-  "include": ["src/main/webapp/app", "src/test/javascript/"],
+  "include": ["src/main/webapp", "src/test/javascript/"],
   "exclude": ["node_modules"]
 }

@@ -1,23 +1,20 @@
-<jhi-page-ribbon></jhi-page-ribbon>
-<div>
+<!-- <jhi-page-ribbon></jhi-page-ribbon> -->
+<!-------------------------------------------------------Theme Selector-->
+<div color="primary" class="ontop">
+<fa-icon icon="burn"   (click)="onSetTheme()"></fa-icon>
+</div>
+<!------------------------------------------------------------------------------------------------->
+<div [class.dark-theme]="isAlternateMode">
 
 
-    <jhi-sidenav> </jhi-sidenav>
+   <jhi-sidenav> </jhi-sidenav>
 
-<!--
 
-    <div class="">
-        <div class="card jh-card">
-            <router-outlet></router-outlet>
-            <router-outlet name="popup"></router-outlet>
-        </div>
-    </div>-->
+    <jhi-speed-dial-fab></jhi-speed-dial-fab>
+
 
     <jhi-footer></jhi-footer>
-    <!--<router-outlet name="sidenav"></router-outlet>-->
 
 
 </div>
-
-
 
